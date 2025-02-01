@@ -1,4 +1,5 @@
 def format_string(name, age):
+
     """
     Create a formatted string using f-strings.
     Args:
@@ -7,9 +8,11 @@ def format_string(name, age):
     Returns:
         str: Formatted string
     """
-    pass
+    return f"My name is {name} and I am {age} years old"
+
 
 def conditional_check(number):
+
     """
     Check if a number is greater, lesser, or equal to 10.
     Args:
@@ -17,9 +20,17 @@ def conditional_check(number):
     Returns:
         str: "Greater", "Lesser", or "Equal"
     """
-    pass
+
+    if number < 10:
+        return "Lesser"
+    if number == 10: 
+       return "Equal"
+    if number > 10: 
+        return "Greater"
+    
 
 def loop_sum(n):
+
     """
     Calculate sum of numbers from 1 to n using a loop.
     Args:
@@ -27,9 +38,16 @@ def loop_sum(n):
     Returns:
         int: Sum of numbers
     """
-    pass
+
+    total = 0 
+    for n in range (1, n+1):
+        total += n 
+    
+    return total
+
 
 def list_operations(numbers):
+    
     """
     Perform operations on a list of numbers.
     Args:
@@ -37,9 +55,16 @@ def list_operations(numbers):
     Returns:
         tuple: (sum, max, min)
     """
-    pass
 
-def dict_operations(students_dict):
+    total_sum = sum(numbers)
+    maximum = max(numbers)
+    minimum = min(numbers)
+
+    return total_sum, maximum, minimum
+
+
+def dict_operations (students_scores):
+
     """
     Find students with scores above 80.
     Args:
@@ -47,20 +72,27 @@ def dict_operations(students_dict):
     Returns:
         list: Names of students with scores > 80
     """
-    pass
 
-def set_operations(list1, list2):
+    return [name for name, score in students_scores.items() 
+                 if score > 80]
+
+    
+
+def set_operations(t1, t2):
+
     """
     Find common elements between two lists.
     Args:
-        list1 (list): First list
-        list2 (list): Second list
+        t1 (list): First list
+        t2 (list): Second list
     Returns:
         set: Common elements
     """
-    pass
+
+    return set(t1) & set(t2)
 
 def arithmetic_ops(a, b):
+
     """
     Perform arithmetic operations.
     Args:
@@ -69,9 +101,17 @@ def arithmetic_ops(a, b):
     Returns:
         dict: Results of arithmetic operations
     """
-    pass
 
-def logical_ops(x, y):
+    return {
+        "sum": a+b,
+        "difference": a-b,
+        "product": a*b,
+        "quotient": a/b if b != 0 else None
+        }
+
+
+def logical_ops(x,y):
+
     """
     Perform logical operations.
     Args:
@@ -80,9 +120,16 @@ def logical_ops(x, y):
     Returns:
         dict: Results of logical operations
     """
-    pass
+
+    return {
+        "and": x and y,
+        "or": x or y,
+        "not_x": not x
+    }
+
 
 def bitwise_ops(a, b):
+  
     """
     Perform bitwise operations.
     Args:
@@ -91,4 +138,10 @@ def bitwise_ops(a, b):
     Returns:
         dict: Results of bitwise operations
     """
-    pass
+
+    return {
+        "and": a&b,
+        "or": a|b,
+        "xor": a^b
+    }
+    
